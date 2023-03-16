@@ -13,8 +13,11 @@ let socket = null;
 
 export const connectWithSocketServer = (userDetails) => {
   const jwtToken = userDetails.token;
-
-  socket = io("http://localhost:5002", {
+  const url =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5002"
+      : "https://flippant-sleet-production.up.railway.app";
+  socket = io(url, {
     auth: {
       token: jwtToken,
     },

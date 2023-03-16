@@ -1,8 +1,9 @@
 import axios from "axios";
 import { logout } from "./shared/utils/auth";
-
+const url = "https://flippant-sleet-production.up.railway.app";
 const apiClient = axios.create({
-  baseURL: "http://localhost:5002/api",
+  baseURL:
+    process.env.NODE_ENV === "development" ? "http://localhost:5002/api" : url,
   timeout: 1000,
 });
 
