@@ -15,17 +15,13 @@ const PORT = process.env.PORT || process.env.API_PORT;
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(
-  express.static(
-    path.join(path.resolve(), "discord-frontend", "build", "index.html")
-  )
-);
+app.use(express.static(path.join(path.resolve(), "discord-frontend", "build")));
 // register the routes
 app.use("/api/auth", authRoutes);
 app.use("/api/friend-invitation", friendInvitationRoutes);
 app.get("/*", (req, res) => {
   return res.sendFile(
-    path.join(path.resolve(), "discord-backend", "build", "index.html")
+    path.join(path.resolve(), "discord-frontend", "build", "index.html")
   );
 });
 const server = http.createServer(app);
