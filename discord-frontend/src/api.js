@@ -1,6 +1,6 @@
 import axios from "axios";
 import { logout } from "./shared/utils/auth";
-const url = "https://flippant-sleet-production.up.railway.app";
+const url = "https://flippant-sleet-production.up.railway.app/api";
 const apiClient = axios.create({
   baseURL:
     process.env.NODE_ENV === "development" ? "http://localhost:5002/api" : url,
