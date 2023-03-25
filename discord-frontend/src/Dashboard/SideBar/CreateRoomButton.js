@@ -2,6 +2,23 @@ import React from "react";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import * as roomHandler from "../../realtimeCommunication/roomHandler";
+import styled from "@emotion/styled";
+export const MyButton = styled(Button)({
+  width: "4.8rem",
+  height: "4.8rem",
+  borderRadius: "1.6rem",
+  margin: 0,
+  padding: 0,
+  minWidth: 0,
+  marginTop: "1rem",
+  color: "white",
+  backgroundColor: "#5865F2",
+  "@media (max-width:700px)": {
+    width: "2rem",
+    height: "2rem",
+    borderRadius: ".6rem",
+  },
+});
 
 const CreateRoomButton = ({ isUserInRoom }) => {
   const createNewRoomHandler = () => {
@@ -9,23 +26,9 @@ const CreateRoomButton = ({ isUserInRoom }) => {
   };
 
   return (
-    <Button
-      disabled={isUserInRoom}
-      onClick={createNewRoomHandler}
-      style={{
-        width: "48px",
-        height: "48px",
-        borderRadius: "16px",
-        margin: 0,
-        padding: 0,
-        minWidth: 0,
-        marginTop: "10px",
-        color: "white",
-        backgroundColor: "#5865F2",
-      }}
-    >
+    <MyButton disabled={isUserInRoom} onClick={createNewRoomHandler}>
       <AddIcon />
-    </Button>
+    </MyButton>
   );
 };
 

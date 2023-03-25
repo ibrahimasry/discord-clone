@@ -7,8 +7,8 @@ const FriendsTitle = ({ title }) => {
       sx={{
         textTransform: "uppercase",
         color: "#8e9297",
-        fontSize: "14px",
         marginTop: "10px",
+        textAlign: "center",
       }}
     >
       {title}

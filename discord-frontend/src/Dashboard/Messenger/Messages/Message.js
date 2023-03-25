@@ -6,11 +6,11 @@ import Typography from "@mui/material/Typography";
 const MainContainer = styled("div")({
   width: "97%",
   display: "flex",
-  marginTop: "10px",
+  marginTop: "1rem",
 });
 
 const AvatarContainer = styled("div")({
-  width: "70px",
+  width: "7rem",
 });
 
 const MessageContainer = styled("div")({
@@ -28,7 +28,7 @@ const SameAuthorMessageContent = styled("div")({
 });
 
 const SameAuthorMessageText = styled("span")({
-  marginLeft: "70px",
+  marginLeft: "7rem",
 });
 
 const Message = ({ content, sameAuthor, username, date, sameDay }) => {

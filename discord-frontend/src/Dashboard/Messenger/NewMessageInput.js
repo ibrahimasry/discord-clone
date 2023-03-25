@@ -14,11 +14,11 @@ const MainContainer = styled("div")({
 const Input = styled("input")({
   backgroundColor: "#2f3136",
   width: "98%",
-  height: "44px",
+  height: "4.4rem",
   color: "white",
   border: "none",
   borderRadius: "8px",
-  fontSize: "14px",
+  fontSize: "1.4rem",
   padding: "0 10px",
 });
 

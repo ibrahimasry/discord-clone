@@ -7,7 +7,7 @@ import Message from "./Message";
 import DateSeparator from "./DateSeparator";
 
 const MainContainer = styled("div")({
-  height: "calc(100% - 60px)",
+  height: "calc(100% - 6rem)",
   overflow: "auto",
   display: "flex",
   flexDirection: "column",

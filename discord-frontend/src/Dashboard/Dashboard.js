@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/system";
 import SideBar from "./SideBar/SideBar";
 import FriendsSideBar from "./FriendsSideBar/FriendsSideBar";
@@ -17,17 +17,19 @@ const Wrapper = styled("div")({
 });
 
 const Dashboard = ({ setUserDetails, isUserInRoom }) => {
+  const [user, setUser] = useState();
   useEffect(() => {
     const userDetails = localStorage.getItem("user");
 
     if (!userDetails) {
       logout();
     } else {
+      setUser(userDetails);
       setUserDetails(JSON.parse(userDetails));
       connectWithSocketServer(JSON.parse(userDetails));
     }
   }, []);
-
+  if (!user) return <p>loading ..</p>;
   return (
     <Wrapper>
       <SideBar />

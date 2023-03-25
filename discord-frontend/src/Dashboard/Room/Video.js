@@ -5,7 +5,7 @@ const MainContainer = styled("div")({
   height: "50%",
   width: "50%",
   backgroundColor: "black",
-  borderRadius: "8px",
+  borderRadius: ".8rem",
 });
 
 const VideoEl = styled("video")({
