@@ -4,8 +4,8 @@ import AddIcon from "@mui/icons-material/Add";
 import * as roomHandler from "../../realtimeCommunication/roomHandler";
 import styled from "@emotion/styled";
 export const MyButton = styled(Button)({
-  width: "4.8rem",
-  height: "4.8rem",
+  width: "3rem",
+  height: "3rem",
   borderRadius: "1.6rem",
   margin: 0,
   padding: 0,
