@@ -11,6 +11,10 @@ const MainContainer = styled("div")({
 const VideoEl = styled("video")({
   width: "100%",
   height: "100%",
+  borderRadius: "50%",
+  padding: ".5rem",
+  margin: ".5rem",
+  border: "1px yellow solid",
 });
 
 const Video = ({ stream, isLocalStream }) => {
